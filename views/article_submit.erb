@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Article Submission</title>
+  </head>
+
+  <body>
+    <h2>Submit a new article</h2>
+    <form action="/articles" method="post">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" value ="<%= title %>" required>
+      <label for="address">URL:</label>
+      <input type="url" id="address" name="address" required>
+      <label for="description">Description:</label>
+      <input type="textarea" id="description" name="description" minlength="20" value ="<%= description %>" required>
+
+      <input type="submit">
+
+      <% if flag == true %>
+        <p>Somebody has already submitted this link, please try again</p>
+      <% end %>
+
+
+    </form>
+  </body>
+</html>

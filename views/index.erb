@@ -1,0 +1,26 @@
+<% require "pry" %>
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <title>Article index</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+<body>
+  <h1>Articles</h1>
+
+  <ul>
+    <% articles.each do |article| %>
+      <li>
+        <%= article.title %>
+        <a href = <%= article.address %> target="_blank"> link </a>
+        <br>
+        <%= article.description %>
+      </li>
+      <br>
+      <% end %>
+  </ul>
+
+  <p> <a href = '/articles/new'>Submit</a> an article!</p>
+</body>
+</html>
